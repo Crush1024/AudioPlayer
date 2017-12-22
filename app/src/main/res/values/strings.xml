@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">DAudioOlayer</string>
+    <string name="app_name">AudioPlayer</string>
+    <string name="edit">编辑</string>
 </resources>

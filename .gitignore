@@ -12,3 +12,9 @@
 
 .idea/vcs.xml
 app/libs/
+gradle.properties
+gradlew
+gradlew.bat
+.idea/
+build/
+gradle/

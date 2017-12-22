@@ -1,15 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.destiny.daudioolayer.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.destiny.daudioolayer.activity.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:padding="3dp"
+            android:text="@string/edit"
+            android:textSize="16sp"
+        />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="music"
+            android:textSize="16sp"
+        />
+        <ImageView
+            android:id="@+id/iv_to_search"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_launcher"
+        />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_music_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="同步远程仓库代码"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:id="@+id/rel_music_item"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_picture_music"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/iv_picture_music"
+                android:text="生如夏花"
+                android:textSize="14sp"
+            />
+            <TextView
+                android:id="@+id/tv_singer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_music_name"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/iv_picture_music"
+                android:text="朴树"
+                android:textSize="10sp"
+            />
+        </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+        >
+            <ImageView
+                android:id="@+id/iv_previous"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher"
+            />
+
+            <ImageView
+                android:id="@+id/iv_pause"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher"
+            />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
